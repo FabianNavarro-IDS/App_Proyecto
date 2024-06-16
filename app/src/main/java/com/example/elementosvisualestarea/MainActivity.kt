@@ -8,8 +8,12 @@ import android.widget.AdapterView
 import android.widget.AdapterView.OnItemClickListener
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import android.widget.Button
 import android.widget.EditText
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,38 +35,54 @@ class MainActivity : AppCompatActivity() {
     fun send  (v: View) {
         val usu = findViewById<AutoCompleteTextView>(R.id.actUsuario)
         val con = findViewById<EditText>(R.id.contra)
-        val id = findViewById<EditText>(R.id.id)
+
+        val Lbt = findViewById<RadioButton>(R.id.RbuttonLuz)
+        val Obt = findViewById<RadioButton>(R.id.RbuttonOsc)
+
+        val builder = AlertDialog.Builder(this@MainActivity)
+        val view = layoutInflater.inflate(R.layout.dialog, null)
+
+        builder.setView(view)
+        val dialog = builder.create()
+        view.findViewById<Button>(R.id.Okbutton).setOnClickListener{
+            dialog.hide()
+        }
 
         var bndusu = true
         var bndcon = true
-        var bndid = true
 
         usu.error = null
         con.error = null
-        id.error = null
 
         if (usu.text.toString().trim().isEmpty()){
+            dialog.show()
             bndusu = false
             usu.error = "Porfavor esciba su usuario"
         }
 
         if (con.text.toString().trim().isEmpty()){
+            dialog.show()
             bndcon = false
             con.error = "Porfavor escriba una contraseña"
         }
 
-        if (id.text.toString().trim().isEmpty()){
-            bndid = false
-            id.error = "Porfavor ingrese un Id"
-        }
-
-        if ( bndusu && bndcon && bndid) {
-            when (v.getId()) {
-                R.id.sesion -> {
-                    val intent = Intent(this, MainActivity2::class.java)
-                    startActivity(intent)
+        if ( bndusu && bndcon) {
+            if (Lbt.isChecked) {
+                when (v.getId()) {
+                    R.id.sesion -> {
+                        val intent = Intent(this, MainActivity2::class.java)
+                        startActivity(intent)
+                    }
+                }
+            } else if (Obt.isChecked) {
+                when (v.getId()) {
+                    R.id.sesion -> {
+                        val intent = Intent(this, MainActivity4::class.java)
+                        startActivity(intent)
+                    }
                 }
             }
+
         }
     }
 }

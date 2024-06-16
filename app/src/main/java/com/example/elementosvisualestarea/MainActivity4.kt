@@ -23,14 +23,6 @@ class MainActivity4 : AppCompatActivity(), View.OnClickListener, RadioGroup.OnCh
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main4)
 
-        jedi = findViewById(R.id.checkBoxJedi)
-        sith = findViewById(R.id.checkBoxSith)
-
-        rG = findViewById(R.id.radioGroup)
-        r1 = findViewById(R.id.radioButtonAzul)
-        r2 = findViewById(R.id.radioButtonRojo)
-        r3 = findViewById(R.id.radioButtonVerde)
-
         rG?.setOnCheckedChangeListener(this)
 
 
