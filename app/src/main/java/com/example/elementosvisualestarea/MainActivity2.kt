@@ -12,6 +12,7 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.Toast
 import android.widget.ToggleButton
+import com.example.elementosvisualestarea.fragment.MainActivity
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -68,6 +69,46 @@ class MainActivity2 : AppCompatActivity() {
         }
     }
 
+    fun sendjedis (v: MenuItem): Boolean {
+        when (v.itemId) {
+            R.id.Jedis -> {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+        }
+        return true
+    }
+
+    fun sendaliados (v: MenuItem): Boolean {
+        when (v.itemId) {
+            R.id.Aliados -> {
+                val intent = Intent(this, MainActivity3::class.java)
+                startActivity(intent)
+            }
+        }
+        return true
+    }
+
+    fun sendnaves (v: MenuItem): Boolean {
+        when (v.itemId) {
+            R.id.Naves -> {
+                val intent = Intent(this, MainActivity3::class.java)
+                startActivity(intent)
+            }
+        }
+        return true
+    }
+
+    fun sendacerca (v: MenuItem): Boolean {
+        when (v.itemId) {
+            R.id.Acerca -> {
+                val intent = Intent(this, MainActivity3::class.java)
+                startActivity(intent)
+            }
+        }
+        return true
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.activit_main_menu, menu)
@@ -78,6 +119,10 @@ class MainActivity2 : AppCompatActivity() {
         return when (item.itemId){
             R.id.Sables -> mostrar_mensaje("Sables de luz desde menu de opciones")
             R.id.vader -> mostrar_mensaje("Darth Vader desde menu de opciones")
+            R.id.Jedis -> sendjedis(item)
+            R.id.Aliados -> sendaliados(item)
+            R.id.Naves -> sendnaves(item)
+            R.id.Acerca -> sendacerca(item)
             else -> super.onOptionsItemSelected(item)
         }
     }

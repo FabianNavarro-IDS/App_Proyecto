@@ -8,7 +8,8 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     android:gravity="center"
-    android:background="#FF1A1A">
+    android:background="#FF1A1A"
+    android:id="@+id/mainLayout">
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,7 +26,7 @@
         android:columnCount="2"
         android:orientation="horizontal">
 
-        <ImageButton
+        <ImageView
             android:onClick="sendanakin"
             android:id="@+id/anakin"
             android:layout_width="170dp"
@@ -35,7 +36,7 @@
             android:src="@drawable/img2"
             />
 
-        <ImageButton
+        <ImageView
             android:onClick="sendobiwan"
             android:id="@+id/obiwan"
             android:scaleType="fitXY"
@@ -44,7 +45,7 @@
             android:layout_height="250dp"
             android:src="@drawable/img3"/>
 
-        <ImageButton
+        <ImageView
             android:onClick="sendluke"
             android:id="@+id/luke"
             android:scaleType="fitXY"
@@ -53,7 +54,7 @@
             android:layout_height="250dp"
             android:src="@drawable/img4"/>
 
-        <ImageButton
+        <ImageView
             android:onClick="sendashoka"
             android:id="@+id/ashoka"
             android:scaleType="fitXY"
@@ -61,7 +62,13 @@
             android:layout_width="170dp"
             android:layout_height="250dp"
             android:src="@drawable/img5"/>
-
     </GridLayout>
+
+    <ToggleButton
+        android:id="@+id/TGButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="Oscuro"
+        android:textOff="Luz"/>
 
 </LinearLayout>

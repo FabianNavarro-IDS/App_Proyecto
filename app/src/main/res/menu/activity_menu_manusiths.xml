@@ -4,25 +4,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/Jedis"
-        android:title="Jedis"
+        android:id="@+id/Siths"
+        android:title="Mas Siths"
         app:showAsAction="collapseActionView"
         />
 
     <item
-        android:id="@+id/Aliados"
+        android:id="@+id/AliadosSith"
         android:title="Aliados"
         app:showAsAction="collapseActionView"
         />
 
     <item
-        android:id="@+id/Naves"
+        android:id="@+id/NavesSith"
         android:title="Naves"
         app:showAsAction="collapseActionView"
         />
 
     <item
-        android:id="@+id/Acerca"
+        android:id="@+id/AcercaSith"
         android:title="Acerca de"
         app:showAsAction="collapseActionView"
         />
