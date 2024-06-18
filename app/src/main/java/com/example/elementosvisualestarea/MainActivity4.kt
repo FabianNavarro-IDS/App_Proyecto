@@ -15,6 +15,8 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
 import android.widget.ToggleButton
+import androidx.appcompat.app.AlertDialog
+import com.example.elementosvisualestarea.fragmentsith.MainActivity
 
 class MainActivity4 : AppCompatActivity() {
 
@@ -28,9 +30,11 @@ class MainActivity4 : AppCompatActivity() {
         toggleButton.setOnCheckedChangeListener { _, isChecked ->
             Log.d("MainActivity2", "ToggleButton isChecked: $isChecked")
             if (isChecked) {
-                mainLayout.setBackgroundColor(Color.BLUE)
+                val intent = Intent(this, MainActivity2::class.java)
+                startActivity(intent)
             } else {
-                mainLayout.setBackgroundColor(Color.RED)
+                val intent = Intent(this, MainActivity4::class.java)
+                startActivity(intent)
             }
         }
     }
@@ -38,8 +42,12 @@ class MainActivity4 : AppCompatActivity() {
     fun sendanakin (v: View) {
         when (v.getId()) {
             R.id.anakin -> {
-                val intent = Intent(this, MainActivity4::class.java)
-                startActivity(intent)
+                val builder = AlertDialog.Builder(this@MainActivity4)
+                val view = layoutInflater.inflate(R.layout.vader, null)
+                builder.setView(view)
+                val dialog = builder.create()
+
+                dialog.show()
             }
         }
     }
@@ -47,8 +55,12 @@ class MainActivity4 : AppCompatActivity() {
     fun sendobiwan (v: View) {
         when (v.getId()) {
             R.id.obiwan -> {
-                val intent = Intent(this, MainActivity4::class.java)
-                startActivity(intent)
+                val builder = AlertDialog.Builder(this@MainActivity4)
+                val view = layoutInflater.inflate(R.layout.maul, null)
+                builder.setView(view)
+                val dialog = builder.create()
+
+                dialog.show()
             }
         }
     }
@@ -56,8 +68,12 @@ class MainActivity4 : AppCompatActivity() {
     fun sendluke (v: View) {
         when (v.getId()) {
             R.id.luke -> {
-                val intent = Intent(this, MainActivity4::class.java)
-                startActivity(intent)
+                val builder = AlertDialog.Builder(this@MainActivity4)
+                val view = layoutInflater.inflate(R.layout.sidious, null)
+                builder.setView(view)
+                val dialog = builder.create()
+
+                dialog.show()
             }
         }
     }
@@ -65,8 +81,12 @@ class MainActivity4 : AppCompatActivity() {
     fun sendashoka (v: View) {
         when (v.getId()) {
             R.id.ashoka -> {
-                val intent = Intent(this, MainActivity4::class.java)
-                startActivity(intent)
+                val builder = AlertDialog.Builder(this@MainActivity4)
+                val view = layoutInflater.inflate(R.layout.dooku, null)
+                builder.setView(view)
+                val dialog = builder.create()
+
+                dialog.show()
             }
         }
     }
@@ -74,27 +94,7 @@ class MainActivity4 : AppCompatActivity() {
     fun sendsith (v: MenuItem): Boolean {
         when (v.itemId) {
             R.id.Siths -> {
-                val intent = Intent(this, MainActivity3::class.java)
-                startActivity(intent)
-            }
-        }
-        return true
-    }
-
-    fun sendaliadossith (v: MenuItem): Boolean {
-        when (v.itemId) {
-            R.id.AliadosSith -> {
-                val intent = Intent(this, MainActivity3::class.java)
-                startActivity(intent)
-            }
-        }
-        return true
-    }
-
-    fun sendnavessith (v: MenuItem): Boolean {
-        when (v.itemId) {
-            R.id.NavesSith -> {
-                val intent = Intent(this, MainActivity3::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             }
         }
@@ -104,7 +104,7 @@ class MainActivity4 : AppCompatActivity() {
     fun sendacercasith (v: MenuItem): Boolean {
         when (v.itemId) {
             R.id.AcercaSith -> {
-                val intent = Intent(this, MainActivity3::class.java)
+                val intent = Intent(this, MainActivity5::class.java)
                 startActivity(intent)
             }
         }
@@ -119,11 +119,9 @@ class MainActivity4 : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId){
-            R.id.Sables -> mostrar_mensaje("Sables de luz desde menu de opciones")
-            R.id.vader -> mostrar_mensaje("Darth Vader desde menu de opciones")
+            R.id.Sables -> mostrar_mensaje("Ayuda") && sendayuda(item)
+            R.id.vader -> mostrar_mensaje("Sobre mi") && sendsobremi(item)
             R.id.Siths -> sendsith(item)
-            R.id.AliadosSith -> sendaliadossith(item)
-            R.id.NavesSith -> sendnavessith(item)
             R.id.AcercaSith -> sendacercasith(item)
             else -> super.onOptionsItemSelected(item)
         }
@@ -134,6 +132,26 @@ class MainActivity4 : AppCompatActivity() {
         toast.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0 , 0)
         toast.show()
 
+        return true
+    }
+
+    fun sendayuda (v: MenuItem): Boolean {
+        when (v.itemId) {
+            R.id.Sables -> {
+                val intent = Intent(this, MainActivity6::class.java)
+                startActivity(intent)
+            }
+        }
+        return true
+    }
+
+    fun sendsobremi (v: MenuItem): Boolean {
+        when (v.itemId) {
+            R.id.vader -> {
+                val intent = Intent(this, MainActivity7::class.java)
+                startActivity(intent)
+            }
+        }
         return true
     }
 }

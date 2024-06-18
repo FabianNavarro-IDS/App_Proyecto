@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val actv = findViewById<AutoCompleteTextView>(R.id.actUsuario)
-        val adapter = ArrayAdapter(applicationContext,android.R.layout.simple_spinner_dropdown_item, nombres)
+        val adapter = ArrayAdapter(applicationContext,android.R.layout.simple_list_item_1, nombres)
 
         actv.setAdapter(adapter)
         actv.setOnClickListener(OnItemClickListener { parent, view, position, id ->

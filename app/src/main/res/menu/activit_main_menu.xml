@@ -10,18 +10,6 @@
         />
 
     <item
-        android:id="@+id/Aliados"
-        android:title="Aliados"
-        app:showAsAction="collapseActionView"
-        />
-
-    <item
-        android:id="@+id/Naves"
-        android:title="Naves"
-        app:showAsAction="collapseActionView"
-        />
-
-    <item
         android:id="@+id/Acerca"
         android:title="Acerca de"
         app:showAsAction="collapseActionView"

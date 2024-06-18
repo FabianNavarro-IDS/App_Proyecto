@@ -7,28 +7,25 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ListView
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.elementosvisualestarea.CustomAdapter
 import com.example.elementosvisualestarea.R
 
 class FragmentList : Fragment() {
     private lateinit var lista: ListView
-    private val so = arrayOf("Anakin Skywalker", "Luke Skywalker", "Leia Skywalker", "Han Solo", "Obi Wan Kenobi", "Chewbacca", "Qui Gon Yin")
+    private val so = arrayOf("Anakin Skywalker", "Luke Skywalker", "Leia Skywalker", "Mace Windu", "Obi Wan Kenobi", "Yoda", "Qui Gon Jinn")
 
-    private val imgso = arrayOf(R.drawable.vadericon, R.drawable.vadericon, R.drawable.vadericon, R.drawable.vadericon, R.drawable.vadericon, R.drawable.vadericon,
-        R.drawable.vadericon)
+    private val imgso = arrayOf(R.drawable.anakin, R.drawable.luke, R.drawable.leia, R.drawable.windu, R.drawable.obiwan, R.drawable.yoda,
+        R.drawable.quigon)
 
     private val desc = arrayOf(
-        "Un sistema operativo popular desarrollado por Microsoft.",
-        "Un sistema operativo para las computadoras Macintosh de Apple.",
-        "Una familia de sistemas operativos de código abierto similares a Unix.",
-        "Un sistema operativo similar a Unix compuesto enteramente de software libre.",
-        "Un sistema operativo móvil desarrollado por Google.",
-        "Un sistema operativo Unix originalmente desarrollado por Sun Microsystems.",
-        "Un sistema operativo empresarial de código abierto."
+        "Anakin Skywalker, un hombre humano sensible a la Fuerza, fue un Caballero Jedi de la República Galáctica y el Elegido de la Fuerza.",
+        "Luke Skywalker fue un legendario héroe de guerra y Jedi que fundó la Nueva Orden Jedi. Era el hijo del Caballero Jedi Anakin Skywalker y la senadora Padmé Amidala de Naboo, además hermano mellizo de Leia Organa.",
+        "Leia Organa Solo (nacida Leia Amidala Skywalker) fue en diversas etapas de su vida política, revolucionaria y Caballero Jedi de la Nueva Orden Jedi. Hija del General Jedi Anakin Skywalker y la senadora Padmé Amidala de Naboo, Leia fue la hermana melliza de Luke Skywalker,",
+        "Mace Windu era un korun que fue un prominente Maestro Jedi durante los últimos años de la República Galáctica. Proveniente del mundo de Haruun Kal, Windu sirvió como uno de los últimos miembros del Alto Consejo Jedi antes de la Gran Purga Jedi.",
+        "Obi-Wan Kenobi fue un legendario Maestro Jedi que jugó un rol significante en el destino de la galaxia durante los últimos días de la República Galáctica. Fue el maestro de Anakin y Luke Skywalker, entrenándolos en los caminos de la Fuerza.",
+        "Yoda era uno de los más renombrados y poderosos Maestros Jedi durante toda la historia de la galaxia, y uno de los pocos Jedis de la República Galáctica en sobrevivir hasta la Guerra Civil Galáctica.",
+        "Qui-Gon Jinn fue un venerado, aunque disidente y poco convencional, Maestro Jedi humano. Fue Padawan del Conde Dooku, y mentor de Obi-Wan Kenobi y brevemente de Anakin Skywalker."
     )
 
     private val list: ArrayList<String> = ArrayList(so.toList())

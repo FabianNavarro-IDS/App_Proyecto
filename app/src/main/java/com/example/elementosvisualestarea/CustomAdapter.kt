@@ -1,4 +1,4 @@
-package com.example.elementosvisualestarea.fragment
+package com.example.elementosvisualestarea
 
 import android.content.Context
 import android.view.LayoutInflater

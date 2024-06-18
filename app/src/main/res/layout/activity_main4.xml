@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     android:gravity="center"
-    android:background="#FF1A1A"
+    android:background="@drawable/fondosith"
     android:id="@+id/mainLayout">
 
     <TextView
@@ -33,7 +33,7 @@
             android:layout_height="250dp"
             android:layout_margin="10dp"
             android:scaleType="fitXY"
-            android:src="@drawable/img2"
+            android:src="@drawable/img6"
             />
 
         <ImageView
@@ -43,7 +43,7 @@
             android:layout_margin="10dp"
             android:layout_width="170dp"
             android:layout_height="250dp"
-            android:src="@drawable/img3"/>
+            android:src="@drawable/img7"/>
 
         <ImageView
             android:onClick="sendluke"
@@ -52,7 +52,7 @@
             android:layout_margin="10dp"
             android:layout_width="170dp"
             android:layout_height="250dp"
-            android:src="@drawable/img4"/>
+            android:src="@drawable/img8"/>
 
         <ImageView
             android:onClick="sendashoka"
@@ -61,7 +61,7 @@
             android:layout_margin="10dp"
             android:layout_width="170dp"
             android:layout_height="250dp"
-            android:src="@drawable/img5"/>
+            android:src="@drawable/img9"/>
     </GridLayout>
 
     <ToggleButton

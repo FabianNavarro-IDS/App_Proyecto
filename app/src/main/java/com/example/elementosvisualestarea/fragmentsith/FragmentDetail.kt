@@ -1,4 +1,4 @@
-package com.example.elementosvisualestarea.fragment
+package com.example.elementosvisualestarea.fragmentsith
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -20,7 +20,7 @@ class FragmentDetail : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_detail2, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_detail, container, false)
         txtDetalle = view.findViewById(R.id.fragment_datail_os)
         imgDetalle = view.findViewById(R.id.fragment_detail_imgos)
         descDetalle = view.findViewById(R.id.fragment_datail_desc)

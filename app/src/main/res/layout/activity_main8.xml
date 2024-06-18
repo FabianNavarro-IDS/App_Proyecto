@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondoextra"
+    tools:context=".MainActivity6">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="50dp"
+        android:text="Ayuda"
+        android:textColor="#FFFF"/>
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:src="@drawable/starwars"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:text="Seleccione su problema"
+        android:textColor="#FFFF"/>
+
+    <Spinner
+
+        android:id="@+id/problemSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#880E4F"
+        android:backgroundTint="#FFC900"
+        android:dropDownWidth="wrap_content"
+        android:spinnerMode="dropdown"
+        android:textAlignment="center" />
+
+
+
+</LinearLayout>

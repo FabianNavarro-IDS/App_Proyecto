@@ -6,22 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/fondojedis"
-    tools:context=".MainActivity3">
+    android:background="@drawable/fondosith"
+    tools:context=".MainActivity5">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="50dp"
-        android:text="Jedi's"
+        android:text="Sith's"
         android:textColor="#FFFF"/>
 
     <ImageView
         android:layout_margin="10dp"
         android:layout_width="350dp"
         android:layout_height="250dp"
-        android:src="@drawable/jedi"
+        android:src="@drawable/sith"
         android:scaleType="fitXY"
         android:layout_gravity="center"/>
 
@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
-                android:text="Un Jedi era un miembro de la Orden Jedi, que estudiaba, servía y usaba las energías místicas de la Fuerza, normalmente, el lado luminoso de la Fuerza. Su arma era el sable de luz, un arma hecha de pura energía “un arma noble para otros tiempos mas civilizados”. Los Jedis lucharon por la paz y la justicia en la República Galáctica, comúnmente contra sus enemigos mortales, los Sith y Jedi Oscuros, que estudiaban el lado oscuro de la Fuerza."
+                android:text="La Orden Sith oficialmente Orden de los Caballeros Oscuros de Sith, fue una secta de usuarios del lado oscuro de la Fuerza, antagonista de la Orden Jedi. Se caracterizaban por la obtención del poder para sí mismos y los métodos brutales que eran capaces de emplear para obtenerlo. La secta existió en numerosas formas a lo largo de la historia galáctica, experimentando auges y caídas de forma constante."
                 android:textColor="#FFFF"
                 android:textSize="25dp" />
         </LinearLayout>

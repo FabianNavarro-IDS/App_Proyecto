@@ -6,22 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/fondojedis"
-    tools:context=".MainActivity3">
+    android:background="@drawable/fondosith">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="50dp"
-        android:text="Jedi's"
+        android:text="Darth Sidious"
         android:textColor="#FFFF"/>
 
     <ImageView
         android:layout_margin="10dp"
-        android:layout_width="350dp"
-        android:layout_height="250dp"
-        android:src="@drawable/jedi"
+        android:layout_width="250dp"
+        android:layout_height="350dp"
+        android:src="@drawable/sidious"
         android:scaleType="fitXY"
         android:layout_gravity="center"/>
 
@@ -38,9 +37,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
-                android:text="Un Jedi era un miembro de la Orden Jedi, que estudiaba, servía y usaba las energías místicas de la Fuerza, normalmente, el lado luminoso de la Fuerza. Su arma era el sable de luz, un arma hecha de pura energía “un arma noble para otros tiempos mas civilizados”. Los Jedis lucharon por la paz y la justicia en la República Galáctica, comúnmente contra sus enemigos mortales, los Sith y Jedi Oscuros, que estudiaban el lado oscuro de la Fuerza."
+                android:text="Sheev Palpatine, también conocido como Darth Sidious, fue un humano sensible a la Fuerza que sirvió como el último Canciller de la República Galáctica y el primer Emperador del Imperio Galáctico. Fue un Señor Oscuro de los Sith que seguía la Regla de Dos, un antiguo principio de la Orden de los Lores Sith, y fue el Lord Sith más poderoso en la historia galáctica."
                 android:textColor="#FFFF"
                 android:textSize="25dp" />
         </LinearLayout>
     </ScrollView>
+
 </LinearLayout>
