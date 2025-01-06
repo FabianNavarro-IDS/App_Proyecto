@@ -7,10 +7,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".fragment.ActivityDetail">
+    tools:context=".Fragments.fragment.ActivityDetail">
 
     <fragment
-        android:name="com.example.elementosvisualestarea.fragment.FragmentDetail"
+        android:name="com.example.elementosvisualestarea.Fragments.fragment.FragmentDetail"
         android:id="@+id/activity_detail_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

@@ -1,7 +1,6 @@
 package com.example.elementosvisualestarea
 
 import android.content.Intent
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -13,7 +12,8 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import android.widget.ToggleButton
 import androidx.appcompat.app.AlertDialog
-import com.example.elementosvisualestarea.fragment.MainActivity
+import com.example.elementosvisualestarea.Fragments.fragment.MainActivity
+import com.example.elementosvisualestarea.ListView.ListViewActivity
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -28,9 +28,6 @@ class MainActivity2 : AppCompatActivity() {
             Log.d("MainActivity2", "ToggleButton isChecked: $isChecked")
             if (isChecked) {
                 val intent = Intent(this, MainActivity4::class.java)
-                startActivity(intent)
-            } else {
-                val intent = Intent(this, MainActivity2::class.java)
                 startActivity(intent)
             }
         }
@@ -108,6 +105,16 @@ class MainActivity2 : AppCompatActivity() {
         return true
     }
 
+    fun sendnaves (v: MenuItem): Boolean {
+        when (v.itemId) {
+            R.id.Naves -> {
+                val intent = Intent(this, ListViewActivity::class.java)
+                startActivity(intent)
+            }
+        }
+        return true
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.activit_main_menu, menu)
@@ -120,6 +127,7 @@ class MainActivity2 : AppCompatActivity() {
             R.id.vader -> mostrar_mensaje("Sobre mi") && sendsobremi(item)
             R.id.Jedis -> sendjedis(item)
             R.id.Acerca -> sendacerca(item)
+            R.id.Naves -> sendnaves(item)
             else -> super.onOptionsItemSelected(item)
         }
     }

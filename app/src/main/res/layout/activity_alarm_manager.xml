@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Alarmas.AlarmManager">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alarmas y Notificaciones"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Configuración de Hora -->
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numbersSelectorColor="@color/blue"
+        android:foregroundTint="#FFFF"
+        android:background="@drawable/starwars"
+
+        android:headerBackground="@color/black" />
+
+    <!-- Botón para Programar Alarma -->
+    <Button
+        android:id="@+id/btnSetAlarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Programar Alarma"
+        android:layout_marginBottom="16dp"
+        android:background="@color/blue"
+        android:textColor="#FFFF"/>
+
+    <!-- Botón para Enviar Notificación Inmediata -->
+    <Button
+        android:id="@+id/btnSendNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar Notificación"
+        android:background="@color/blue"
+        android:textColor="#FFFF"/>
+
+</LinearLayout>

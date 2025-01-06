@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img1"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/starwars" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B7000000"
+        android:text="Registro de Usuario"
+        android:textAlignment="center"
+        android:textColor="#FFFF"
+        android:textSize="45dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/registerUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="#B7000000"
+        android:hint="Usuario"
+        android:inputType="textAutoComplete"
+        android:imeOptions="actionNext"
+        android:textAlignment="center"
+        android:textColor="#FFFF"
+        android:textColorHint="#4A48D5" />
+
+    <EditText
+        android:id="@+id/registerCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B7000000"
+        android:hint="Correo"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress"
+        android:padding="20dp"
+        android:textAlignment="center"
+        android:textColor="#FFFF"
+        android:textColorHint="#4A48D5" />
+
+    <EditText
+        android:id="@+id/registerContra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B7000000"
+        android:hint="Contraseña"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textAlignment="center"
+        android:textColor="#FFFF"
+        android:textColorHint="#4A48D5" />
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/blue"
+        android:drawableLeft="@drawable/lisicon"
+        android:text="Registrar"
+        android:textColor="#4A48D5" />
+
+</LinearLayout>

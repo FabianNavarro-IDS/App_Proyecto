@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "771661131116",
+    "project_id": "proyectomovil-7e1e2",
+    "storage_bucket": "proyectomovil-7e1e2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771661131116:android:0c787aea2254d398325749",
+        "android_client_info": {
+          "package_name": "com.example.elementosvisualestarea"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiJnVy0Hfhsx3pqwtkxIAZ24Cl33BUnZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

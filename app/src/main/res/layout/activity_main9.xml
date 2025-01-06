@@ -42,7 +42,7 @@
         android:text="Seleccione su personaje favorito"
         android:textColor="#FFC900"/>
 
-    <LinearLayout
+    <TableRow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -67,9 +67,9 @@
             android:text="Darth Maul"
             android:textColor="#FFFF"
             android:textSize="20dp" />
-    </LinearLayout>
+    </TableRow>
 
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -94,9 +94,9 @@
                 android:text="Obi-Wan"
                 android:textColor="#FFFF"
                 android:textSize="20dp" />
-        </LinearLayout>
+        </TableRow>
 
-    <LinearLayout
+    <TableRow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -121,6 +121,16 @@
             android:text="Ahsoka"
             android:textColor="#FFFF"
             android:textSize="20dp" />
-    </LinearLayout>
+    </TableRow>
 
+    <Button
+        android:id="@+id/activity_main_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginVertical="20dp"
+        android:text="I'm Your Father"
+        android:background="@drawable/fondoextra"
+        android:textColor="#FFFF"
+        />
 </LinearLayout>

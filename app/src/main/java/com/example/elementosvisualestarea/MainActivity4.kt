@@ -1,7 +1,6 @@
 package com.example.elementosvisualestarea
 
 import android.content.Intent
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -9,14 +8,12 @@ import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.CheckBox
 import android.widget.LinearLayout
-import android.widget.RadioButton
-import android.widget.RadioGroup
 import android.widget.Toast
 import android.widget.ToggleButton
 import androidx.appcompat.app.AlertDialog
-import com.example.elementosvisualestarea.fragmentsith.MainActivity
+import com.example.elementosvisualestarea.Fragments.fragmentsith.MainActivity
+import com.example.elementosvisualestarea.ListView.ListViewActivity
 
 class MainActivity4 : AppCompatActivity() {
 
@@ -31,9 +28,6 @@ class MainActivity4 : AppCompatActivity() {
             Log.d("MainActivity2", "ToggleButton isChecked: $isChecked")
             if (isChecked) {
                 val intent = Intent(this, MainActivity2::class.java)
-                startActivity(intent)
-            } else {
-                val intent = Intent(this, MainActivity4::class.java)
                 startActivity(intent)
             }
         }
@@ -111,6 +105,16 @@ class MainActivity4 : AppCompatActivity() {
         return true
     }
 
+    fun sendnaves (v: MenuItem): Boolean {
+        when (v.itemId) {
+            R.id.Naves -> {
+                val intent = Intent(this, ListViewActivity::class.java)
+                startActivity(intent)
+            }
+        }
+        return true
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.activity_menu_manusiths, menu)
@@ -123,6 +127,7 @@ class MainActivity4 : AppCompatActivity() {
             R.id.vader -> mostrar_mensaje("Sobre mi") && sendsobremi(item)
             R.id.Siths -> sendsith(item)
             R.id.AcercaSith -> sendacercasith(item)
+            R.id.Naves -> sendnaves(item)
             else -> super.onOptionsItemSelected(item)
         }
     }

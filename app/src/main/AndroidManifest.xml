@@ -2,6 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +28,56 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ElementosVisualesTarea"
         tools:targetApi="31">
+        <activity
+            android:name=".CrudActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListView.ListViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecyclerView.RecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Calendario.DatePickerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mapa.MapsActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCQBCJKuABvH5UbcQY3aHoL46oIWZC_UGQ" />
+
+        <activity
+            android:name=".Camara.CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Sensor.SensorActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+
+        <receiver android:name=".Alarmas.AlarmReceiver" />
+
+        <activity
+            android:name=".Alarmas.AlarmManager"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity7"
             android:exported="false" />
@@ -25,31 +91,19 @@
             android:name=".MainActivity3"
             android:exported="false" />
         <activity
-            android:name=".MainActivity11"
+            android:name=".Fragments.fragmentsith.ActivityDetail"
             android:exported="false" />
         <activity
-            android:name=".MainActivity10"
+            android:name=".Fragments.fragmentsith.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity9"
+            android:name=".Fragments.fragment.ActivityDetail"
             android:exported="false" />
         <activity
-            android:name=".MainActivity8"
+            android:name=".Fragments.fragment.FragmentList"
             android:exported="false" />
         <activity
-            android:name=".fragmentsith.ActivityDetail"
-            android:exported="false" />
-        <activity
-            android:name=".fragmentsith.MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".fragment.ActivityDetail"
-            android:exported="false" />
-        <activity
-            android:name=".fragment.FragmentList"
-            android:exported="false" />
-        <activity
-            android:name=".fragment.MainActivity"
+            android:name=".Fragments.fragment.MainActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity4"
@@ -58,7 +112,7 @@
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".SplashScreen.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
